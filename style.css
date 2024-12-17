@@ -1,3 +1,50 @@
 input:focus:invalid{
     border: 2px solid blue;
 }
+
+.letters{
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-auto-rows: 100px;
+    grid-gap:10px;
+
+    
+}
+.box{
+ background-color: bisque;
+ text-align: center;
+ place-content: center;
+ border-radius: 15px;
+} 
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Profil alanı sabit genişlikte */
+    grid-template-rows: 1fr; /* Tek satır */
+    grid-template-areas: 
+      "profile projects";
+    height: 100vh;
+    gap: 20px; /* Profil ve projeler arasında boşluk */
+  }
+  
+  .profile {
+    grid-area: profile;
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* İki sütunlu bir düzen */
+    gap: 20px; /* Projeler arasında boşluk */
+   
+  }
+  
+  .project {
+    background-color: lightgreen;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 28px;
+  }
+  
